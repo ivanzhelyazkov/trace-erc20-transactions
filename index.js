@@ -8,7 +8,7 @@ let ABSTRACT_ABI = require('./abi/token_abi')
 
 async function watchTokenTransfers() {
   // Instantiate web3 with WebSocketProvider
-  const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.INFURA_WS_URL))
+  const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.WS_URL))
 
   // Instantiate token contract object with JSON ABI and address
   const dai = new web3.eth.Contract(
